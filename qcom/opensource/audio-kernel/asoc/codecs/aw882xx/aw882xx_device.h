@@ -282,6 +282,9 @@ struct aw_device {
 	unsigned int vol_step;
 	unsigned int re_max;
 	unsigned int re_min;
+	unsigned int fade_en;
+
+	unsigned int ramp_in_process;
 
 	struct device *dev;
 	struct i2c_client *i2c;
