@@ -2,7 +2,7 @@
 EXTRA_CFLAGS += -Wall
 EXTRA_CFLAGS += -I$(KERNEL_SRC)/../sm8475-modules/motorola/include
 EXTRA_CFLAGS += -I$(KERNEL_SRC)/../sm8475-modules/motorola/include/linux/input/awinic
-EXTRA_CFLAGS += -I$(KERNEL_SRC)/drivers/base
+EXTRA_CFLAGS += -I$(KERNEL_SRC)/../sm8475/drivers/base
 
 ifneq ($(filter m y,$(CONFIG_AW96XX_POWER_SUPPLY_ONLINE)),)
 	EXTRA_CFLAGS += -DCONFIG_USE_POWER_SUPPLY_ONLINE
