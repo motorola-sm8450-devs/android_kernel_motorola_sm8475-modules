@@ -405,7 +405,7 @@ static int fpc1020_create_sysfs(struct fpc1020_data *fpc1020, bool create) {
 
 		/* Pass 'dev' as the parent device instead of NULL. */
 		fpc1020->class_dev = device_create_with_groups(fingerprint_class, dev,
-				MAJOR(dev_no), fpc1020, attribute_groups, "fpc1020");
+				MAJOR(dev_no), fpc1020, attribute_groups, "fpc_fingerprint");
 		if (IS_ERR(fpc1020->class_dev)) {
 			dev_err(dev, "%s create fingerprint class device failed.\n", __func__);
 			rc = PTR_ERR(fpc1020->class_dev);
